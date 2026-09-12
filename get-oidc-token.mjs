@@ -18,7 +18,7 @@ function callCursorApi(path, body) {
     sock.on('error', reject);
     sock.on('end', () => {
       const idx = data.indexOf('\r\n\r\n');
-      if (idx === -1) return reject(new Error('bad response'));
+      if (idx === -1) return reject(new Error('bad response: ' + data.toString().slice(0, 200)));
       const headers = data.slice(0, idx).toString();
       const status = headers.match(/HTTP\/\d\.\d (\d+)/)?.[1];
       const json = JSON.parse(data.slice(idx + 4).toString());
