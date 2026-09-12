@@ -27,14 +27,7 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-40 transition-all duration-300",
-        scrolled
-          ? "border-b border-border/50 bg-background/90 shadow-sm backdrop-blur-lg"
-          : "bg-background/70 backdrop-blur-sm"
-      )}
-    >
+    <header className={cn("fixed inset-x-0 top-0 z-40 transition-all duration-300", scrolled ? "border-b border-border/50 bg-background/90 shadow-sm backdrop-blur-lg" : "bg-background/70 backdrop-blur-sm")}>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/"><Logo size="sm" /></Link>
         <nav className="hidden items-center gap-1 md:flex" aria-label="Glavna navigacija">

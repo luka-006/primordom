@@ -15,11 +15,8 @@ export function Footer() {
               {siteConfig.tagline}. Dolazimo na objekt i šaljemo fotografije.
             </p>
           </div>
-
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-              Stranica
-            </h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Stranica</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="#usluge" className="hover:text-primary">Usluge</Link></li>
               <li><Link href="#teren" className="hover:text-primary">Teren</Link></li>
@@ -28,7 +25,6 @@ export function Footer() {
             </ul>
           </div>
         </div>
-
         <div className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
           <p>© {year} {siteConfig.legalName}</p>
         </div>

@@ -44,8 +44,7 @@ export function CookieBanner() {
         <div className="flex-1 space-y-3">
           <p className="text-sm font-medium text-foreground">Kolačići i privatnost</p>
           <p className="text-sm leading-relaxed text-muted-foreground">
-            Koristimo nužne kolačiće za rad stranice te, uz vaš pristanak, obrađujemo podatke iz kontakt obrasca radi odgovora na upit. Više u{" "}
-            <Link href="/privatnost" className="font-medium text-primary underline-offset-4 hover:underline">politici privatnosti</Link>.
+            Koristimo nužne kolačiće za rad stranice te, uz vaš pristanak, obrađujemo podatke iz kontakt obrasca radi odgovora na upit.
           </p>
           <div className="flex flex-wrap gap-2">
             <Button size="sm" onClick={() => handleConsent("accepted")}>Prihvaćam</Button>

@@ -129,7 +129,9 @@ export function ContactForm() {
         <Label htmlFor="service">Vrsta usluge *</Label>
         <select id="service" name="service" required className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50" defaultValue="">
           <option value="" disabled>Odaberite uslugu</option>
-          {serviceOptions.map((option) => (<option key={option} value={option}>{option}</option>))}
+          {serviceOptions.map((option) => (
+            <option key={option} value={option}>{option}</option>
+          ))}
         </select>
       </div>
 
@@ -138,15 +140,27 @@ export function ContactForm() {
         <Textarea id="message" name="message" required rows={4} placeholder="Opišite objekt, učestalost održavanja i posebne zahtjeve..." />
       </div>
 
-      {state === "error" && errorMessage && (<p className="text-sm text-destructive" role="alert">{errorMessage}</p>)}
+      {state === "error" && errorMessage && (
+        <p className="text-sm text-destructive" role="alert">{errorMessage}</p>
+      )}
 
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={state === "loading"}>
-        {state === "loading" ? (<><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />Šaljem...</>) : ("Pošalji upit")}
+        {state === "loading" ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+            Šaljem...
+          </>
+        ) : (
+          "Pošalji upit"
+        )}
       </Button>
 
       <p className="text-xs text-muted-foreground">
         Slanjem upita potvrđujete da ste pročitali{" "}
-        <a href="/privatnost" className="underline underline-offset-2 hover:text-foreground">politiku privatnosti</a>.
+        <a href="/privatnost" className="underline underline-offset-2 hover:text-foreground">
+          politiku privatnosti
+        </a>
+        .
       </p>
     </form>
   );
