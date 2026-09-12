@@ -1,105 +1,33 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { siteConfig } from "@/lib/site";
-import { ArrowRight, ShieldCheck, Clock, MapPin } from "lucide-react";
-
+import { images } from "@/lib/images";
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        aria-hidden="true"
-      >
-        <div className="absolute -top-24 right-0 h-[480px] w-[480px] rounded-full bg-primary/8 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-sky-400/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, oklch(0.7 0 0 / 0.12) 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
-
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Badge variant="secondary" className="mb-6 rounded-full px-3 py-1">
-              Hrvatska & BiH · Besplatna procjena
-            </Badge>
-          </motion.div>
-
-          <motion.h1
-            className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.08 }}
-          >
-            Održavanje vaše nekretnine{" "}
-            <span className="text-primary">dok ste daleko</span>
-          </motion.h1>
-
-          <motion.p
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.16 }}
-          >
-            {siteConfig.name} preuzima brigu o okućnicama, vikendicama, jahtama,
-            brodovima, apartmanima i vilama — uz profesionalno soboslikanje i
-            redovite izvještaje s fotografijama.
-          </motion.p>
-
-          <motion.div
-            className="mt-8 flex flex-wrap gap-3"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.24 }}
-          >
-            <Link href="#kontakt" className={cn(buttonVariants({ size: "lg" }))}>
-              Zatražite besplatnu procjenu
-              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link
-              href="#usluge"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-            >
-              Pogledajte usluge
-            </Link>
+    <section className="relative overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
+        <div>
+          <motion.p className="text-sm font-medium uppercase tracking-widest text-primary" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>Split i Jadran</motion.p>
+          <motion.h1 className="mt-4 font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-[3.25rem]" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.06 }}>Održavanje kuća, vikendica i plovila dok niste tu</motion.h1>
+          <motion.p className="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.12 }}>Dolazimo na objekt, provjeravamo stanje i šaljemo fotografije. Radimo u Hrvatskoj i Bosni i Hercegovini.</motion.p>
+          <motion.div className="mt-8 flex flex-wrap gap-3" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }}>
+            <Link href="#kontakt" className={cn(buttonVariants({ size: "lg" }))}>Pošaljite upit</Link>
+            <Link href="#usluge" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>Pogledajte usluge</Link>
           </motion.div>
         </div>
-
-        <motion.div
-          className="mt-14 grid gap-4 sm:grid-cols-3"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-        >
-          {[
-            { icon: ShieldCheck, label: "Provjereni izvođači" },
-            { icon: Clock, label: "Brza reakcija 24/7" },
-            { icon: MapPin, label: "Obala i unutrašnjost" },
-          ].map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center gap-3 rounded-2xl border border-border/60 bg-card/60 p-4 backdrop-blur-sm"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <span className="text-sm font-medium">{label}</span>
-            </div>
-          ))}
+        <motion.div className="relative" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.65, delay: 0.15 }}>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl shadow-primary/10 sm:aspect-[5/4]">
+            <Image src={images.hero.src} alt={images.hero.alt} fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+          </div>
+          <motion.div className="absolute -bottom-4 -left-4 rounded-2xl border border-border/50 bg-card p-4 shadow-lg sm:-bottom-6 sm:-left-6" animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
+            <p className="text-xs text-muted-foreground">Zadnji izvještaj</p>
+            <p className="font-medium">Vikendica, Brač</p>
+            <p className="text-sm text-primary">12 fotografija poslano</p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
