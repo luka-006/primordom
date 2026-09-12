@@ -4,7 +4,11 @@ Profesionalna landing stranica za **PrimorDom** — usluge održavanja okućnica
 
 Stranica je optimizirana za SEO i hvatanje leadova putem kontakt obrasca.
 
-## Pokretanje
+## Repozitorij
+
+GitHub: [github.com/luka-006/primordom](https://github.com/luka-006/primordom)
+
+## Pokretanje lokalno
 
 ```bash
 npm install
@@ -14,14 +18,20 @@ npm run dev
 
 Aplikacija je dostupna na [http://localhost:4317](http://localhost:4317).
 
-## Konfiguracija e-maila
+## Deploy (Vercel + GitHub)
 
-1. Postavite `CONTACT_EMAIL` u `.env.local` na adresu na koju želite primati upite.
-2. Za produkciju preporučujemo [Resend](https://resend.com):
-   - `RESEND_API_KEY` — API ključ
-   - `RESEND_FROM` — verificirana adresa pošiljatelja
+Projekt je povezan s GitHub repozitorijem. Svaki push na `main` automatski pokreće deploy na Vercelu.
 
-Bez Resend ključa upiti se logiraju u konzolu servera (korisno za razvoj).
+### Environment varijable na Vercelu
+
+| Varijabla | Opis |
+|-----------|------|
+| `CONTACT_EMAIL` | Adresa na koju stižu upiti (`itsnovahub@gmail.com`) |
+| `NEXT_PUBLIC_SITE_URL` | Produkcijski URL (npr. `https://primordom-luka6.vercel.app`) |
+| `RESEND_API_KEY` | (opcionalno) Resend API ključ za slanje mailova |
+| `RESEND_FROM` | (opcionalno) Verificirana adresa pošiljatelja |
+
+Bez Resend ključa upiti se logiraju u server log (korisno za testiranje).
 
 ## Struktura
 
@@ -29,6 +39,7 @@ Bez Resend ključa upiti se logiraju u konzolu servera (korisno za razvoj).
 - `src/components/` — UI komponente i sekcije
 - `src/app/api/contact/route.ts` — API za kontakt formu
 - `src/app/privatnost/` — politika privatnosti i kolačića
+- `public/images/` — lokalne slike za hero i showcase
 
 ## SEO
 
