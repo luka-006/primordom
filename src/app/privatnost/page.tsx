@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Politika privatnosti",
-  description: `Politika privatnosti i kolačića, ${siteConfig.name}`,
+  description: `Politika privatnosti i kolačića — ${siteConfig.name}`,
 };
 
 export default function PrivacyPage() {
