@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { CookieBanner } from "@/components/cookie-banner";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
+import { Showcase } from "@/components/sections/showcase";
 import { Benefits } from "@/components/sections/benefits";
 import { Process } from "@/components/sections/process";
 import { FAQ } from "@/components/sections/faq";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <Services />
+        <Showcase />
         <Benefits />
         <Process />
         <FAQ />
