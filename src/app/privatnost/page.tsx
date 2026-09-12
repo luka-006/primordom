@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Politika privatnosti",
-  description: `Politika privatnosti i kolačića — ${siteConfig.name}`,
+  description: `Politika privatnosti i kolačića, ${siteConfig.name}`,
 };
 
 export default function PrivacyPage() {
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             <p>
               {siteConfig.legalName} ({siteConfig.name}) pruža usluge održavanja
               nekretnina i plovila u Republici Hrvatskoj i Bosni i Hercegovini.
-              Kontakt: {siteConfig.email}.
+              Za upite koristite kontakt obrazac na početnoj stranici.
             </p>
           </section>
 
@@ -68,11 +68,8 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-foreground">5. Vaša prava</h2>
             <p>
               Imate pravo na pristup, ispravak, brisanje, ograničenje obrade,
-              prigovor i prijenos podataka. Za ostvarivanje prava pišite na{" "}
-              <a href={`mailto:${siteConfig.email}`} className="text-primary hover:underline">
-                {siteConfig.email}
-              </a>
-              .
+              prigovor i prijenos podataka. Za ostvarivanje prava pošaljite upit
+              putem kontakt obrasca na početnoj stranici.
             </p>
           </section>
 

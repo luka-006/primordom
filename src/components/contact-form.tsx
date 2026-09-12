@@ -145,7 +145,8 @@ export function ContactForm() {
       </Button>
 
       <p className="text-xs text-muted-foreground">
-        Slanjem upita potvrđujete da ste pročitali <a href="/privatnost" className="underline underline-offset-2 hover:text-foreground">politiku privatnosti</a>.
+        Slanjem upita potvrđujete da ste pročitali{" "}
+        <a href="/privatnost" className="underline underline-offset-2 hover:text-foreground">politiku privatnosti</a>.
       </p>
     </form>
   );
