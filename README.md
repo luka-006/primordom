@@ -2,7 +2,7 @@
 
 Profesionalna landing stranica za **PrimorDom** — usluge održavanja okućnica, vikendica, jahti, brodova, apartmana, vila i soboslikanja u Hrvatskoj i Bosni i Hercegovini.
 
-Stranica je optimizirana za SEO i hvatanje leadova putem kontakt obrasca.
+Stranica je optimizirana za SEO i hvatanje leadova putem kontakt forme.
 
 ## Repozitorij
 
